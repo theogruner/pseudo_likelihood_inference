@@ -1,0 +1,4 @@
+name: UniformKernel
+update_method: alpha_quantile # Choose between `ess` or `alpha_quantile`
+alpha_ess: 0.9
+alpha_quantile: 0.1

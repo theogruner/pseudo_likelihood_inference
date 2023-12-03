@@ -1,0 +1,23 @@
+# posterior sampling
+n_posterior_samples: 10_000
+
+# MCMC hparams
+n_warmup: 1_000
+n_chains: 16
+
+# Density estimation hparams
+n_train_data: 10_000
+n_eval_data: 1_000
+training_steps: 5000
+lr: 1e-4
+batch_size: 128
+eval_frequency: 100
+num_layers: 3
+hidden_size: 32
+mlp_num_layers: 3
+num_bins: 5
+
+# Mixture density hparams
+prior_mixture_coeff: 0.1
+
+# Rejection sampling hparams

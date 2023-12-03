@@ -1,0 +1,3 @@
+name: GMM
+update_method: m-projection
+n_components: 8

@@ -1,0 +1,15 @@
+jax==0.4.1
+jaxlib==0.4.1
+jaxtyping==0.2.9
+tensorflow==2.11.0
+tensorflow-probability==0.18.0
+hydra-core
+flax==0.6.1
+dm-haiku==0.0.10
+ott-jax==0.2.11
+numpyro==0.10.1
+diffrax==0.2.1
+optax==0.1.3
+seaborn
+distrax @ git+https://github.com/theogruner/distrax.git@73347185a536ca41fdd667e973c08d0e2328fd5c
+wandb_plot @ git+https://github.com/danielpalen/wandb_plot.git

@@ -1,0 +1,23 @@
+defaults:
+  - model: pmc
+  - pseudo_likelihood: uniform-kernel
+  - statistical_distance: mmd
+
+# Task-specific configurations
+name: ABC
+group_name: "${method.model.name}-${method.pseudo_likelihood.name}-${method.statistical_distance.name}"
+n_reference_samples: 100
+sampling_batch_size: 1000
+n_parallel_operations: 1000
+eval_interval: 10
+checkpoint_interval: 100
+episodes: 200
+max_resampling_tries: 1e3
+
+# Hyperparameters
+seed: 0
+pseudo_likelihood:
+  update_method: alpha_quantile
+n_samples_per_param: 100
+n_param_samples: 100
+n_posterior_samples: 1000

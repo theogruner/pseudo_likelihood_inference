@@ -1,0 +1,24 @@
+defaults:
+  - method: pli
+  - task: slcp
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+# wandb configs
+project: pli
+
+group: "${task.name}-${method.group_name}\
+  -n_train_data_${task.n_train_data}"
+
+# Data loading and logging directories
+saving: False
+debug: False
+plotting: True
+gpu: True
+data_dir: # If None, the repositories default data_dir is chosen
+logs_dir: # If None, the repositories default logs_dir is chosen
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .

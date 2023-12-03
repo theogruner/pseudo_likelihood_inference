@@ -1,0 +1,11 @@
+defaults:
+  - posterior_sampling: sbibm
+
+name: SIR
+n_train_data: 100
+n_eval_data: 100
+
+# posterior sampling
+n_posterior_samples: 10_000
+n_warmup: 10_000
+n_chains: 16

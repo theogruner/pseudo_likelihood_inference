@@ -1,0 +1,11 @@
+name: NSF
+update_method: m-projection
+num_layers: 5  # aka num transforms
+hidden_size: 50
+mlp_num_layers: 2
+num_bins: 10
+
+lr: 1e-4
+batch_size: 125
+training_steps: 5000
+retrain_from_scratch: True

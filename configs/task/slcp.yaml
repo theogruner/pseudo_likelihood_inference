@@ -1,0 +1,6 @@
+defaults:
+  - posterior_sampling: sbibm
+
+name: SLCP
+n_train_data: 100
+n_eval_data: 100

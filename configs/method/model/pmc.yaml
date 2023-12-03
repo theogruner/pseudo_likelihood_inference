@@ -1,0 +1,5 @@
+name: PMCSampler
+update_method: pmc
+markov_kernel: GMMKernel
+
+alpha_quantile: 0.1

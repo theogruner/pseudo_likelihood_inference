@@ -1,0 +1,9 @@
+defaults:
+  - posterior_sampling: sbibm
+
+name: GaussianMixture
+
+n_train_data: 100
+n_eval_data: 100
+n_posterior_samples: 10_000
+n_dim: 10

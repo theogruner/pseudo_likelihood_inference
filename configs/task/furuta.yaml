@@ -1,0 +1,11 @@
+name: Furuta
+dt: 0.01
+seq_len: 100
+sampling_frequency: 1
+n_train_data: 100
+n_eval_data: 100
+
+# posterior sampling
+n_posterior_samples: 10_000
+n_warmup: 1_000
+n_chains: 16

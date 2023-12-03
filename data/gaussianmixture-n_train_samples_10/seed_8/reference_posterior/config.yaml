@@ -1,0 +1,60 @@
+experiment:
+  model:
+    name: NSF
+    update_method: m-projection
+    num_layers: 5
+    hidden_size: 50
+    mlp_num_layers: 2
+    num_bins: 10
+    lr: 0.0001
+    batch_size: 125
+    training_steps: 5000
+    retrain_from_scratch: false
+  pseudo_likelihood:
+    name: ExponentialKernel
+    epsilon: 0.3
+    beta: 0.001
+    nu: 1.0
+  statistical_distance:
+    name: mmd
+  n_reference_samples: 100
+  simulation_batch_size: 1
+  eval_interval: 1
+  checkpoint_interval: 1
+  episodes: 5
+  max_resampling_tries: 100000.0
+  obs_scaling: min-max
+  seed: 8
+  n_samples_per_param: 100
+  n_param_samples: 5000
+  n_posterior_samples: 1000
+task:
+  posterior_sampling:
+    n_posterior_samples: 10000
+    n_warmup: 1000
+    n_chains: 16
+    n_train_data: 10000
+    n_eval_data: 1000
+    training_steps: 5000
+    lr: 0.0001
+    batch_size: 128
+    eval_frequency: 100
+    num_layers: 3
+    hidden_size: 32
+    mlp_num_layers: 3
+    num_bins: 5
+    prior_mixture_coeff: 0.1
+  name: GaussianMixture
+  n_train_data: 10
+  n_eval_data: 10
+  n_posterior_samples: 10000
+  n_dim: 10
+project: pli-icml
+group: ${task.name}-${experiment.model.name}-${experiment.pseudo_likelihood.epsilon}
+saving: true
+debug: false
+plotting: false
+gpu: true
+max_ram: 24
+data_dir: null
+logs_dir: null

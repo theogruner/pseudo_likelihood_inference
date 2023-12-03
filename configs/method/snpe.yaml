@@ -1,0 +1,20 @@
+defaults:
+  - model: conditioned-nsf
+
+# Task-specific configurations
+name: SNPE
+group_name: "${method.model.name}"
+sampling_batch_size: 1000
+n_parallel_operations: 1000
+model_batch_size: 100
+eval_interval: 1
+checkpoint_interval: 1
+episodes: 5
+n_atoms: 10
+max_resampling_tries: 1e3
+
+# Hyper-parameters
+seed: 0
+n_samples_per_param: 1
+n_param_samples: 5_000
+n_posterior_samples: 1000

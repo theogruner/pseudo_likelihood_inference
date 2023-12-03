@@ -1,0 +1,23 @@
+defaults:
+  - model: gaussian
+  - pseudo_likelihood: exponential-kernel
+  - statistical_distance: mmd
+
+# Task-specific configurations
+name: PLI
+group_name: "${method.model.name}-${method.pseudo_likelihood.name}-${method.statistical_distance.name}"
+n_parallel_operations: 1000
+sampling_batch_size: 1000
+episodes: 20
+eval_interval: 1
+checkpoint_interval: 1
+max_resampling_tries: 1e3
+log_partition: False
+
+# Hyper-parameters
+seed: 0
+n_samples_per_param: 100
+n_param_samples: 5000
+n_posterior_samples: 1000
+epsilon: 0.5
+nu: 1.

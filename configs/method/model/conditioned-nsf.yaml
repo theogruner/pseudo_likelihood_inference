@@ -1,0 +1,12 @@
+name: ConditionedNSF
+update_method: snpe
+num_layers: 5
+hidden_size: 50
+mlp_num_layers: 2
+num_bins: 10
+n_atoms: 10
+
+lr: 1e-5
+batch_size: 125
+training_steps: 1000
+retrain_from_scratch: True
